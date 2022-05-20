@@ -1,46 +1,60 @@
-# Getting Started with Create React App
+# CRA를 기반으로 typescript, eslint, prettier, husky & lint-staged등 설정된 보일러플레이트
+- typescript
+- react
+- react-router-dom
+- emotion
+- axios
+- eslint
+- prettier
+- husky & lint-staged
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Style Guide
 
-## Available Scripts
+### ESLint
+Airbnb의 자바스크립트 스타일 가이드를 기반으로 하되, 우리 상황에 맞게 일부 규칙을 오버라이딩하여 사용  
 
-In the project directory, you can run:
 
-### `yarn start`
+### ES2015+
+권장되는 최소 자바스크립트 버전은 ES6(ECMAScript 2015)이다. 하위 호환이 필요한 경우에는 Babel 트랜스파일러를 통하여 지원하되, 가능한 최신(latest) 문법을 활용할 것.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<br>
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+#### WebStorm 설정
 
-### `yarn build`
+ESLint 설정하기
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Languages & Frameworks > Javascript > Code Quality Tools > ESLint 선택
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+ESLint 패키지 위치 지정 ( Automatic EsLint configuration ) or 수동 설정
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Prettier 설정하기
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Languages & Frameworks > Javascript > Prettier 선택
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+Prettier package 경로 설정,  On ‘Reformat Code’ action 체크
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+---
+#### VSC 설정 (TBU)
 
-## Learn More
+ESLint 설정하기
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+VSC 확장 프로그램 마켓 > ESLint 검색 > Microsoft 인증 마크가 달린 확장 프로그램 설치
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+추가적인 세부 설정은 프로젝트 폴더에서 수행함
+
+ESLint 저장 시 동작 옵션 설정
+
+VSC 코드 설정 페이지 > 상단의 버튼을 클릭하여 settings.json 파일로 이동
+
+다음 항목을 추가
+```
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
+  },
+```
+
+#### reference - https://huraypositive.atlassian.net/wiki/spaces/dev/pages/2350022657/F.E
